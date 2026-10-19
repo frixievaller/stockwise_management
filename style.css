@@ -1,0 +1,40 @@
+/* StockWise custom styling */
+:root { --sw-blue: #1d4f91; --sw-blue-dark: #173e70; --sw-border: #dce5f0; }
+body { color: #243247; }
+.navbar.bg-primary { background: var(--sw-blue) !important; box-shadow: 0 2px 8px rgba(23,62,112,.14); }
+.navbar-brand { letter-spacing: .2px; }
+.card { border: 1px solid var(--sw-border); border-radius: 12px; box-shadow: 0 3px 12px rgba(26,54,93,.055); }
+.card-body { padding: 1.25rem; }
+.stat-card { height: 100%; border-top: 3px solid #d8e7fb; }
+.stat-card h2 { font-weight: 750; margin: .45rem 0; color: #183b68; font-size: clamp(1.25rem, 2vw, 1.8rem); overflow-wrap: anywhere; }
+.stat-card small { display: block; }
+.dashboard-heading h2 { font-size: 1.7rem; font-weight: 750; margin-bottom: .3rem; color: #183b68; }
+.inventory-heading h4 { color: #183b68; font-weight: 700; }
+.required-mark { color: #dc3545; }
+.form-control, .form-select { border-color: #cbd8e8; min-height: 42px; }
+textarea.form-control { min-height: 88px; }
+.form-control:focus, .form-select:focus { border-color: #76a7e8; box-shadow: 0 0 0 .2rem rgba(29,79,145,.12); }
+.btn-primary { background: var(--sw-blue); border-color: var(--sw-blue); }
+.btn-primary:hover { background: var(--sw-blue-dark); border-color: var(--sw-blue-dark); }
+.table { font-size: .93rem; }
+.table thead th { background: #f2f6fb; color: #23456f; white-space: nowrap; }
+.table th, .table td { vertical-align: middle; }
+.low-stock { background-color: #fff3cd !important; }
+.item-row.low-stock td:first-child:after { content: "Low stock"; display: block; width: fit-content; font-size: .72rem; color: #9a6700; background: #fff0bd; padding: .1rem .4rem; border-radius: 999px; margin-top: .2rem; }
+.confirm-backdrop { display:none; position:fixed; inset:0; z-index:2000; padding:1rem; background:rgba(14,28,48,.52); align-items:center; justify-content:center; }
+.confirm-backdrop.show { display:flex; }
+.confirm-box { width:100%; max-width:420px; background:#fff; border-radius:16px; padding:1.6rem; text-align:center; box-shadow:0 18px 55px rgba(0,0,0,.22); }
+.confirm-icon { display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; width:54px; height:54px; border-radius:50%; background:#eaf1fb; color:var(--sw-blue); font-size:1.7rem; font-weight:700; }
+.confirm-box h2 { font-size:1.35rem; font-weight:750; color:#1e344f; }
+.confirm-box p { color:#65758a; margin: .6rem 0 1.25rem; }
+.confirm-actions { display:flex; justify-content:center; gap:.6rem; }
+@media (max-width: 767px) {
+  .navbar .container { gap:.6rem; }
+  .navbar-collapse { padding-top:.5rem; }
+  .dashboard-heading h2 { font-size:1.45rem; }
+  .card-body { padding:1rem; }
+  .stat-card h2 { font-size:1.35rem; }
+  .table { font-size:.82rem; }
+  .table .btn { margin-bottom:.2rem; }
+  .confirm-box { padding:1.25rem; }
+}
